@@ -1,6 +1,5 @@
-# This script makes an API call to get a random word, 
-# then checks that word against the password strength module (Passeo)
-# version 1.0.4 has a CVE against it that was fixed in 1.0.5 and higher
+# This script uses cairosvg to convert a SVG file to a PDF
+# version 2.6.0 has a CVE against it that was fixed in 2.7.0 and higher
 # in order to generate meaningful load for New Relic's dashboard, it does this process multiple times
 
 import newrelic.agent
