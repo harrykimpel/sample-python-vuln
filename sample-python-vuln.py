@@ -5,8 +5,6 @@
 import newrelic.agent
 newrelic.agent.initialize('newrelic.ini') #This is required!
 import cairosvg
-import requests
-import json
 import time
 
 inputurl = "https://random-word-api.herokuapp.com/word"
