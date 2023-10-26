@@ -6,6 +6,8 @@ import newrelic.agent
 newrelic.agent.initialize('newrelic.ini') #This is required!
 import cairosvg
 import time
+import langchain
+import nltk
 
 inputurl = "https://random-word-api.herokuapp.com/word"
 
@@ -17,9 +19,14 @@ def execute_task():
 
 counter = 0
 while True:
-    counter += 1
-    print("counter is "+str(counter))
-    execute_task()
-    time.sleep(5)
+    try:
+        counter += 1
+        print("counter is "+str(counter))
+        execute_task()
+        time.sleep(5)
+    except KeyboardInterrupt:
+        print('Interrupted')
+        break
 
-newrelic.agent.shutdown_agent(timeout=100)
+print('Program ended')
+newrelic.agent.shutdown_agent(timeout=2.5)
